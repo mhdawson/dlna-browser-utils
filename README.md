@@ -140,3 +140,9 @@ var listContent = function(queue, url, options, callback) {
               });
 
 ```
+
+## Contributing
+
+Pull requests welcome. Particularly if you have DLNA servers to test
+against and find issues.  So far I've only tested against my own
+DLNA server which is part of [JavaPvr](https://github.com/mhdawson/JavaPVR).
