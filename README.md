@@ -88,9 +88,7 @@ the control url with a utility like [node-ssdp](https://www.npmjs.com/package/no
 
 As an example you could run it as:
 
-```text
 node example.js "http://10.1.1.176:49081/dev/b9a87696-f016-4a54-81b3-75f57185a385/svc/upnp-org/ContentDirectory/action"
-```
 
 by substituting in the control url for your server.
 
