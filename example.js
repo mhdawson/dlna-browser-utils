@@ -36,7 +36,8 @@ var listContent = function(queue, url, options, callback) {
   var queue = new Array();
   queue.push('0');
   listContent(queue,
-              'http://10.1.1.176:49081/dev/b9a87696-f016-4a54-81b3-75f57185a385/svc/upnp-org/ContentDirectory/action',
+              process.argv[2],
+//              'http://10.1.1.176:49081/dev/b9a87696-f016-4a54-81b3-75f57185a385/svc/upnp-org/ContentDirectory/action',
               {},
               function(err){
                 console.log(err);
