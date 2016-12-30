@@ -1,0 +1,36 @@
+{
+  "name": "dlna-browser-utils",
+  "version": "0.0.1",
+  "description": "Utility to browse dlna servers",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node lib/server.js"
+  },
+  "dependencies": {
+    "xml2js": "~0.4.17", 
+    "xmlbuilder": "~8.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhdawson/dlna-browser-utils.git"
+  },
+  "keywords": [
+    "dlna",
+    "uPnP",
+    "video",
+    "browse"
+  ],
+  "author": "Michael Dawson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mhdawson/dlna-browser-utils/issues"
+  },
+  "homepage": "https://github.com/mhdawson/dlna-browser-utils#readme",
+  "contributors": [
+    {
+      "name": "Michael Dawson",
+      "email": "mdawson@devrus.com"
+    }
+  ]
+}
