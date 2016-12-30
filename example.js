@@ -2,11 +2,13 @@
 
 const browseServer = require('./lib/index.js');
 
-var listContent = function(queue, url, filter, err) {
+var listContent = function(queue, url, options, err) {
   var root = queue.shift();
-  browseServer(function(err, result) {
-console.log(result);
-console.log(err);
+  browseServer(
+    root, 
+    url,
+    {},
+    function(err, result) {
     if (result.container) {
       for (let i = 0; i < result.container.length; i++) {
         if (result.container[i].id != 'Video/temp') {
@@ -24,15 +26,12 @@ console.log(err);
       }
     }
     if (queue.length >0) {
-      listContent(queue, url, err, 'BrowseDirectChildren', filter);
+      listContent(queue, url, options, err);
     }
-  },
-  url,
-  root,
-  'BrowseDirectChildren',
-  filter);
+  });
 }
 
 var queue = new Array();
 queue.push('New(auto)');
-listContent(queue,'http://10.1.1.176:49081/dev/b9a87696-f016-4a54-81b3-75f57185a385/svc/upnp-org/ContentDirectory/action', '\\*', function(){});
+listContent(queue,'http://10.1.1.176:49081/dev/b9a87696-f016-4a54-81b3-75f57185a385/svc/upnp-org/ContentDirectory/action',
+                  {}, function(){});
