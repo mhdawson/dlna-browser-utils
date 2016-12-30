@@ -139,6 +139,19 @@ var listContent = function(queue, url, options, callback) {
 
 ```
 
+A second example is included in the file ```example2.js```.  You will need
+to install [node-ssdp](https://www.npmjs.com/package/node-ssdp) in order to
+run this second example.  It shows how you can dynamically look up a
+DLNA server by name and then list the top level content with 'dlna-browser-utils'.
+
+As an example you can run it as:
+
+```
+node example2.js 'New - Michaels Media Server'
+```
+
+substituting in the name of a DLNA server on your network.
+
 ## Contributing
 
 Pull requests welcome. Particularly if you have DLNA servers to test
